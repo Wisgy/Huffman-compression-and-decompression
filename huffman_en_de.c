@@ -4,11 +4,6 @@
 #define GET_BYTE(vbyte, index) (((vbyte) & (1 << ((index) ^ 7))) != 0)
 #define SET_BYTE(vbyte, index) ((vbyte) |= (1 << ((index) ^ 7)))
 #define CLR_BYTE(vbyte, index) ((vbyte) &= (~(1 << ((index) ^ 7))))
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-#define SET_BYTE(vbyte, index) ((vbyte) |= (1 << ((index) ^ 7)))
-#define CLR_BYTE(vbyte, index) ((vbyte) &= (~(1 << ((index) ^ 7))))
 typedef struct ascii_freq {
     unsigned char ascii;
     int freq;
